@@ -1,0 +1,24 @@
+<div id="ListWatchList" class="container-fluid">
+    <h2 id="CollectionName" class="titreWatchlist">Watchlist -- <%- name.name %> --</h2>
+    <div class="table-responsive listeFilmsWatchListe" >
+        <table class="table grid" id="sort">
+            <tbody>
+            <% _.each(collection, function(movie){ %>
+            <tr class="listMovies">
+                <td class="info1"><span class="glyphicon glyphicon-align-justify dragButton"></span></td>
+                <td class="info2"><img class="miniAfficheFilm" src="<%- movie.attributes.artworkUrl60 %>"/></td>
+                <td class="info3"><%- movie.attributes.trackName %></td>
+                <td class="info3"><%- new Date(movie.attributes.releaseDate).getFullYear() %></td>
+                <td class="info3"><%- movie.attributes.trackLength  %></td>
+                <% if (name.owner.id == owner) { %>
+                <td class="info3"><span class="glyphicon glyphicon glyphicon-remove deleteButton" data-myValue="<%- movie.attributes.trackId %>"></span></td>
+                <% } %>
+            </tr>
+            <% }); %>
+            </tbody>
+        </table>
+        <script type="text/javascript">
+            $( "tbody" ).sortable();
+        </script>
+    </div>
+</div>

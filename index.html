@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/icon_umovie.png" />
+    <link href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <title>UMovie</title>
+</head>
+
+<body>
+<div id="SuccessModal" class="modal fade successError" tabindex="2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog">
+        <div class="modal-content successErrorContent">
+            <div class="modal-body textCentre">
+                <img src="img/robot-with-check-mark.png" class = "successErrorImg" />
+                <h3 class="successErrorTitre">Success</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ErrorModal" class="modal fade successError" tabindex="3" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog">
+        <div class="modal-content successErrorContent">
+            <div class="modal-body textCentre">
+                <img src="img/robot-with-error-sign.png" class = "successErrorImg"/>
+                <h3  class="successErrorTitre">Error</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ErrorServerModal" class="modal fade successError" tabindex="4" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog">
+        <div class="modal-content ErrorServerContent">
+            <div class="modal-body textCentre">
+                <img src="img/glass.png" class = "successErrorImg"/>
+                <h3  class="successErrorTitre">Server UMovie</h3>
+                <h3  class="successErrorTitre">Crash</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ConnexionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog" >
+        <div class="modal-content">
+            <div class="modal-header textCentre">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <img src="http://img4.hostingpics.net/pics/729640iconumovie.png" class = "logoModifWatchList" />
+                <h2 class = "titreModifWatchList">UMovie</h2>
+            </div>
+            <p class="inscription" id="errorLogin"></p>
+            <div class="modal-body textCentre">
+                <div class="tab-content">
+                    <div id="Connect" class="tab-pane active">
+                        <p><input type="text" class="itemModifWatchList"  id="email" placeholder="Email"></p>
+                        <p><input type="password" class="itemModifWatchList" id="password" placeholder="Password"></p>
+                        <p><button id="SignIn" class="itemModifWatchList btn btn-primary">Sign in</button></p>
+                    </div>
+                    <div id="Register" class="tab-pane">
+                        <p><input type="text" class="itemModifWatchList"  id="userNameModal" placeholder="Username"></p>
+                        <p><input type="text" class="itemModifWatchList"  id="userEmailModal" placeholder="Email"></p>
+                        <p><input type="password" class="itemModifWatchList" id="passwordFirst" placeholder="Password"></p>
+                        <p><input type="password" class="itemModifWatchList" id="passwordVerification" placeholder="Retype password"></p>
+                        <p><button id="CreateAccount" class="itemModifWatchList btn btn-primary">Create account</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <ul class="nav nav-tabs" id="tabContent">
+                    <li class="active"><a href="#Connect" data-toggle="tab">Connect</a></li>
+                    <li><a href="#Register" data-toggle="tab">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-menu-top">
+    <!-- TEMPLATE MENU -->
+</div>
+<div class="container-page">
+    <div id="SubPage">
+        <!-- TEMPLATE PAGES -->
+        <div class="row" style="text-align: center; margin-top: 200px;">
+            <img src="img/bienvenue.png" class="img-responsive" style="max-width: 600px; margin:auto;" />
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- CSS stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/movie.css">
+<link rel="stylesheet" type="text/css" href="css/tvshow.css">
+<link rel="stylesheet" type="text/css" href="css/rating.css">
+<link rel="stylesheet" type="text/css" href="css/actor.css">
+<link rel="stylesheet" type="text/css" href="css/search.css">
+<link rel="stylesheet" type="text/css" href="css/profile.css">
+<link rel="stylesheet" type="text/css" href="css/watchList.css">
+
+<!-- Javascript - jQuery - Backbone - UnderscoreJS -->
+<script src="js/utils.js"></script>
+
+<script src="js/models/actorModel.js"></script>
+<script src="js/models/movieModel.js"></script>
+<script src="js/models/tvShowModel.js"></script>
+<script src="js/models/searchModel.js"></script>
+<script src="js/models/userModel.js"></script>
+
+<script src="js/collections/movieCollection.js"></script>
+<script src="js/collections/tvShowCollection.js"></script>
+<script src="js/collections/watchListCollection.js"></script>
+<script src="js/collections/searchCollection.js"></script>
+<script src="js/collections/userCollection.js"></script>
+
+<script src="js/views/menuView.js"></script>
+<script src="js/views/actorView.js"></script>
+<script src="js/views/movieView.js"></script>
+<script src="js/views/tvShowView.js"></script>
+<script src="js/views/watchListView.js"></script>
+<script src="js/views/searchView.js"></script>
+<script src="js/views/profileView.js"></script>
+<script src="js/app.js"></script>
+
+
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
+<script src="js/player.js"></script>
+<script src="js/login.js"></script>
+</body>
+
+</html>

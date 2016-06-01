@@ -1,0 +1,225 @@
+[draggable] {
+    user-select: none;
+}
+
+ol {
+    margin:auto;
+    width:100%;
+    text-align:center;
+}
+li {
+    display: list-item;
+    list-style-type:none;
+    padding:5px;
+    margin:2px;
+    background-color:transparent;
+    border:none;
+}
+.dragButton {
+    line-height: 50px;
+    font-size: 25px;
+    width:auto;
+    opacity: 0.8;
+}
+.mediaPoster {
+    height: 60px;
+    width:auto;
+}
+.mediaPoster img {
+    max-height: 60px;
+    width: auto;
+}
+.mediaName {
+    line-height: 50px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    width: auto;
+}
+.mediaYear {
+    line-height: 50px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    width: auto;
+}
+.mediaLength {
+    line-height: 50px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    width:auto;
+}
+.deleteButton {
+    line-height: 50px;
+    font-size: 15px;
+    color: red;
+    width:auto;
+}
+
+.watchListSelect {
+
+}
+
+.watchListSelect:hover {
+    cursor: pointer;
+}
+
+.watchListSelect:hover canvas {
+    animation: zoomEffect 2s linear infinite;
+}
+
+.detailWatchList{
+	margin-bottom: 100px; 
+	text-align:center; 
+	padding-top:10px; 
+	height:254px;"
+}
+
+.col1{
+	text-align:center; 
+	margin:auto; 
+	width: auto;
+}
+
+.col2{
+	text-align:center; 
+	margin:auto;
+}
+
+.titreWatchList{
+	font-family: cursive !important;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+h2#CollectionName {
+    font-family: cursive !important;
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin: 20px;
+    height: auto;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: #ECECEC;
+    -webkit-box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    text-align: center;
+}
+
+.listeWatchLists{
+	margin-bottom: 50px;
+}
+
+.canvasWatchList{
+	box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+}
+
+.listMovies{
+	border:2px solid rgba(78,78,78, 0.8); 
+	background: rgba(48,48,48,0.8); 
+	max-height: 150px;
+}
+
+.info1{
+	margin:auto; 
+	text-align:center; 
+	vertical-align: middle; 
+	border: none;
+}
+
+.info2{
+	border: none;
+}
+
+.info3{
+	border: none;
+	margin:auto; 
+	text-align:center; 
+	vertical-align: middle !important;
+}
+
+.titreWatchList{
+	font-family: AppleGothic;
+}
+
+.listeFilmsWatchListe{
+	max-width: 100%;
+}
+
+.miniAfficheFilm{
+	max-height: 100%; 
+	width: auto;
+}
+
+.menuDefaults {
+    margin: 10px 0px 20px 20px;
+}
+
+.buttonCircle {
+    width: 30px;
+    height: 30px;
+    line-height: 22px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #565E68;
+}
+
+.buttonCircle:hover {
+    width: 30px;
+    height: 30px;
+    line-height: 22px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #FC6E51;
+    background: #565E68;
+}
+
+.buttonCircle:active {
+    width: 30px;
+    height: 30px;
+    line-height: 22px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #565E68;
+}
+
+.buttonCircle:focus {
+    width: 30px;
+    height: 30px;
+    line-height: 22px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #565E68;
+}
+
+button.buttonCircle .glyphicon-plus {
+    color: #75F500;
+}
+
+button.buttonCircle .glyphicon-pencil {
+    color: #FF8A37;
+}
+
+button.buttonCircle .glyphicon-minus {
+    color: #F50000;
+}
+
+button.buttonCircle:focus {outline:0;}
+
+.deleteButton:hover {
+    cursor: pointer;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes zoomEffect {
+    50% {transform:  scale(1);  }
+    50% {transform:  scale(1.1);  }
+    100% {transform:  scale(1); }
+}
+
+p input {
+    color: black;
+}

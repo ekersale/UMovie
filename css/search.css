@@ -1,0 +1,75 @@
+@import "Fonts.css";
+
+.container-search{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-radio-button-search{
+    width: auto;
+    display: block;
+}
+
+.container-radio-button-genre {
+    width: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.container-radio-button-genre input {
+    margin-left: 20px;
+}
+
+.container-radio-button-search input {
+    margin-right: 8px;
+    margin-left: 20px;
+}
+
+.container-result-search{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-result{
+    margin: 20px;
+    display: inline-flex;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: #ECECEC;
+    -webkit-box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+}
+
+.details-result-name {
+    font-size: 20px;
+}
+
+.details-result-author {
+    color: #444444;
+}
+
+.img-result{
+    height: auto;
+    max-width: 75px;
+}
+
+.no-result {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.details-result {
+    padding-left: 10px;
+    width: 90%;
+}
+
+.add-button-watchlist-search {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}

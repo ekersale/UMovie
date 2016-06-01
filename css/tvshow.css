@@ -1,0 +1,375 @@
+@import "Fonts.css";
+
+.Separator {
+    position: relative;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.startBody {
+    width: 100%;
+    height: 100%;
+}
+
+.info4 {
+    border: none !important;
+    min-width: 100px;
+    margin:auto;
+    text-align:right;
+    vertical-align: middle !important;
+}
+
+.info5 {
+    border: none !important;
+    margin:auto;
+    text-align:left;
+    vertical-align: middle !important;
+}
+
+.Informations {
+    width: 95%;
+    height: 40%;
+    text-align: center;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.JacketSeason {
+    position: absolute;
+    float: left;
+    display: block;
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    top: 5%;
+    bottom: 5%;
+    left: 2%;
+    -webkit-box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+    -moz-box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+    box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+}
+
+.EpisodeDetails:hover img {
+    animation: zoomEffect 2s linear infinite;
+}
+
+
+.JacketSeason img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.fadeIt {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fadeIt:hover {
+    opacity: 0.4;
+    -webkit-mask-image: url("../img/fondu.png");
+}
+
+#FadImage {
+    position: absolute;
+    visibility: hidden;
+}
+
+.fadeIt:hover #FadImage {
+    visibility: visible;
+    !important
+}
+
+.modal-vertical-centered {
+    transform: translate(0, 50%) !important;
+    -ms-transform: translate(0, 50%) !important;
+    /* IE 9 */
+    -webkit-transform: translate(0, 50%) !important;
+    /* Safari and Chrome */
+}
+
+.DetailsTVShow {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin-top: 35px;
+    margin-left: 235px;
+    margin-right: 10px;
+}
+
+.TitleTVShow {
+    position: relative;
+    display: inline-block;
+    margin-left: 1%;
+    float: left;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.TitleTVShow h1 {
+    margin: 0;
+    color: #e9e9e9;
+    font-family: champagneLimousines-normal;
+}
+
+.YearTVShow {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    margin-right: 1%;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.YearTVShow h2 {
+    margin: auto;
+    color: #e9e9e9;
+    font-size: 25px;
+    font-family: champagneLimousines-normal;
+}
+
+
+.DurationTVShow {
+    float: left;
+    position: relative;
+    display: inline-block;
+    margin-left: 1%;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.DurationTVShow h3 {
+    margin: auto;
+    color: #a1a1a1;
+    font-size: 18px;
+    font-family: champagneLimousines-normal;
+}
+
+.ratingTVShow {
+    position: relative;
+    float: left;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    margin-top: 5px;
+    z-index: 15;
+}
+
+.TVShowType {
+    position: relative;
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 1%;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.TVShowType h2 {
+    margin: auto;
+    color: #e9e9e9;
+    font-size: 21px;
+    font-family: champagneLimousines-normal;
+}
+
+.TVShowResume {
+    position: relative;
+    margin-top: 70px;
+    margin-right: 1%;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.TVShowResume p {
+    color: white;
+}
+
+.TVShowProducer {
+    position: relative;
+    float: right;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 1%;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.TVShowProducer img {
+    content: url("../img/BBC-One.png");
+    width: 75px;
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+
+.AppleBadge {
+    display: inline-block;
+    float: left;
+    background: url("http://linkmaker.itunes.apple.com/images/badges/en-us/badge_itunes-lrg.svg") no-repeat;
+    width: 120px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.Episodes {
+    height: auto;
+    margin-top: 100px;
+}
+
+.EpisodeDetails img {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
+.EpisodeDetails {
+    width: 250px;
+    max-width: 250px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    line-height: 50px;
+}
+
+.EpisodeDetails h4 {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.EpisodeDetails h5 {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    color: #d5d5d5;
+}
+
+.contentTVShow{
+	background:transparent; 
+	border: none; 
+	box-shadow: none;
+}
+
+@media (max-width: 530px) {
+    .center-block {float: none !important}
+}
+
+@media (max-width: 740px) {
+    .EpisodeDetails img {
+        display: block;
+        width: 150px;
+        height: auto;
+        margin: auto;
+    }
+    .EpisodeDetails {
+        width: 250px;
+        height: 200px;
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .JacketSeason {
+        position: relative;
+        margin: auto;
+        float: none;
+        width: 200px;
+        margin-top: 20px;
+        right: 0;
+        left: 0;
+        top: 0;
+        -webkit-box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+        -moz-box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+        box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.76);
+    }
+    .DetailsTVShow {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        position: relative;
+    }
+    .TVShowResume {
+        position: relative;
+        margin-top: 70px;
+        margin-right: 1%;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+    .TVShowType {
+        position: relative;
+        float: right;
+        display: inline-block;
+        top: 0;
+        margin-top: 15px;
+        width: 30%;
+        height: auto;
+        right: 0;
+        text-align: right;
+        margin-right: 1%;
+        margin-left: 10px;
+    }
+    .Informations {
+        width: 95%;
+        height: auto;
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+    .ratingTVShow {
+        position: relative;
+        float: left;
+        width: 140px;
+        height: auto;
+        margin-top: 5px;
+        z-index: 15;
+    }
+    .DurationTVShow {
+        float: left;
+        position: relative;
+        display: inline-block;
+        margin-left: 1%;
+        top: 0;
+        right: 0;
+        height: auto;
+        margin-top: 15px;
+        margin-right: 15px;
+        width: 30px;
+    }
+}

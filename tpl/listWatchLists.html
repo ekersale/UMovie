@@ -1,0 +1,73 @@
+<div id="NewWatchList" class="modal fade successError" tabindex="3" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-dismiss="modal">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog" >
+        <div class="modal-content">
+            <div class="modal-header textCentre">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <img src="http://img4.hostingpics.net/pics/729640iconumovie.png" class = "logoModifWatchList" />
+                <h2 class = "titreModifWatchList">Create a watchlist</h2>
+            </div>
+            <div class="modal-body textCentre">
+                <p><input type="text" class="itemModifWatchList" id="CreateWatchListName" placeholder="Watchlist Name"></p>
+                <p><button id="CreateWatchList"  class="itemModifWatchList btn btn-success">create</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="RenameWatchList" class="modal fade successError" tabindex="3" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog" >
+        <div class="modal-content">
+            <div class="modal-header textCentre">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <img src="http://img4.hostingpics.net/pics/729640iconumovie.png" class = "logoModifWatchList"/>
+                <h2 class = "titreModifWatchList">Rename a watchlist</h2>
+            </div>
+            <div class="modal-body textCentre">
+                <select class="form-control WatchListElementsMenu menuModifWatchList">
+                    <% _.each(collection, function(watchList){ %>
+                    <option data-id="<%- watchList.id %>"><%- watchList.name %></option>
+                    <% }); %>
+                </select>
+                <p><input type="text" class="itemModifWatchList" id="NewWatchListName" placeholder="New Watchlist Name"></p>
+                <p><button id="Rename" class="btn btn-warning itemModifWatchList">rename</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="DeleteWatchList" class="modal fade successError" tabindex="3" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered successErrorDialog">
+        <div class="modal-content">
+            <div class="modal-header textCentre">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <img src="http://img4.hostingpics.net/pics/729640iconumovie.png" class = "logoModifWatchList" />
+                <h2 class = "titreModifWatchList">Delete a watchlist</h2>
+            </div>
+            <div class="modal-body textCentre">
+                <select class="form-control WatchListElementsMenu menuModifWatchList" id="removeElement">
+                    <% _.each(collection, function(watchList){ %>
+                        <option data-id="<%- watchList.id %>"><%- watchList.name %></option>
+                    <% }); %>
+                </select>
+                <p><button id="RemoveWatchList" class="itemModifWatchList btn btn-danger">remove</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menuDefaults">
+    <div>
+        <button type="button" class="btn-default buttonCircle" data-toggle="modal" data-target="#NewWatchList" data-dismiss="modal"><span class="glyphicon glyphicon-plus"></span></button>
+        <button type="button" class="btn-default buttonCircle" data-toggle="modal" data-target="#RenameWatchList"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button type="button" class="btn-default buttonCircle" data-toggle="modal" data-target="#DeleteWatchList"><span class="glyphicon glyphicon-minus"></span></button>
+    </div>
+</div>
+<div class="listeWatchLists" id="ListContainer">
+<% _.each(collection, function(watchList){ %>
+    <div class="col-xs-12 col-md-2 col-lg-2 col-sm-4  watchListSelect detailWatchList" data-myValue="<%- watchList.id %>">
+        <row class="col1">
+            <canvas class="canvasWatchList" height="200" width="134"></canvas>
+        </row>
+        <row class="col2">
+            <h4 class="titreWatchList"><%- watchList.name %></h4>
+        </row>
+    </div>
+<% }); %>
+</div>

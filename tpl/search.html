@@ -1,0 +1,94 @@
+<div class="container-search">
+    <h1>Search</h1>
+    <div class="input-group stylish-input-group">
+        <input type="text" class="form-control" id="searchBar" placeholder="Search">
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-search"></span>
+        </span>
+    </div>
+    <div class="container-radio-button-search">
+        <input checked="checked" type="radio" name="type-search" value=""> All
+        <input type="radio" name="type-search" value="/movies"> Movies
+        <input type="radio" name="type-search" value="/actors"> Actors
+        <input type="radio" name="type-search" value="/tvshows/seasons"> Seasons
+        <input type="radio" name="type-search" value="/tvshows/episodes"> Episodes
+        <input type="radio" name="type-search" value="/users"> Users
+    </div>
+    <div class="container-radio-button-genre">
+        <% _.each(results.genre, function(element){ %>
+                <input type="checkbox" class="types-genre" name="type-genre" value="<%= element %>"> <%= element %>
+        <%  }); %>
+    </div>
+</div>
+<div class="container-result-search">
+    <div class="no-result"></div>
+    <% _.each(results.models, function(element){
+        if (filter.length == 0) { %>
+        <div class="search-result" data-id="<%= element.attributes.id %>" data-type="<%= element.attributes.type %>">
+            <div class="img-result">
+                <img src="<%= element.attributes.picture %>">
+            </div>
+            <div class="details-result">
+                <div class="<%= element.attributes.glyphicon %>"> <%= element.attributes.category %></div>
+                <div class="details-result-name"><%= element.attributes.name %></div>
+                <div class="details-result-author"><%= element.attributes.genre %></div>
+                <div><%= element.attributes.description %></div>
+                <% if (element.attributes.type == "movies") { %>
+                <div class="add-button-watchlist-search">
+                    <button id="MovieAddToWatchList"  data-toggle="modal" data-target="#modalWatchListMovie"><span class="glyphicon glyphicon-eye-open"></span> Add to Watchlist</button>
+                </div>
+                <% } %>
+                <% if (element.attributes.type == "profile") { %>
+                <div class="add-button-watchlist-search">
+                    <button class="FollowUser" data-id="<%= element.attributes.id %>"><span class="glyphicon glyphicon-user"></span> Follow User</button>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <% }
+        else {
+            _.each(filter, function(elem){
+                if (elem == element.attributes.genre) { %>
+                <div class="search-result" data-id="<%= element.attributes.id %>" data-type="<%= element.attributes.type %>">
+                    <div class="img-result">
+                        <img src="<%= element.attributes.picture %>">
+                    </div>
+                    <div class="details-result">
+                    <div class="<%= element.attributes.glyphicon %>"> <%= element.attributes.category %></div>
+                    <div class="details-result-name"><%= element.attributes.name %></div>
+                    <div class="details-result-author"><%= element.attributes.genre %></div>
+                    <div><%= element.attributes.description %></div>
+                        <% if (element.attributes.type == "movies") { %>
+                        <div class="add-button-watchlist-search">
+                            <button id="MovieAddToWatchList"  data-toggle="modal" data-target="#modalWatchListMovie"><span class="glyphicon glyphicon-eye-open"></span> Add to Watchlist</button>
+                        </div>
+                        <% } %>
+                        <% if (element.attributes.type == "profile") { %>
+                        <div class="add-button-watchlist-search">
+                            <button class="FollowUser" data-id="<%= element.attributes.id %>"><span class="glyphicon glyphicon-user"></span> Follow User</button>
+                        </div>
+                        <% } %>
+                </div>
+    </div>
+    <% }})}}); %>
+</div>
+<div id="modalWatchListMovie" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered dialogMovieWatchList">
+        <div class="modal-content">
+            <div class="modal-header trailerBody">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <img src="http://img4.hostingpics.net/pics/729640iconumovie.png" class="imgMovieWatchList" />
+                <h2 class="titreMovieWatchList">Watch List</h2>
+            </div>
+            <p class="errorMovieWatchList" id="errorLogin"></p>
+            <div class="modal-body trailerBody">
+                <select id="WatchListMovieElements" class="form-control">
+                    <% _.each(watchlist, function(list){ %>
+                    <option value="<%- list.attributes.id %>"><%- list.attributes.name %> </option>
+                    <% }); %>
+                </select>
+                <button id="AddWatchListConfirm" type="button" class="btn btn-primary addToWatchList" data-dismiss="modal" >Add to watchlist</button>
+            </div>
+        </div>
+    </div>
+</div>

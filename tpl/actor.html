@@ -1,0 +1,33 @@
+<div class="Informations">
+    <div class="PhotoActor">
+        <img src="<%- posterUrl %>"/>
+    </div>
+    <div class="DetailsActor">
+        <div class="NameActor">
+            <h1><%- artistName %></h1>
+        </div>
+        <div class="PrimaryGenreActor">
+            <h3><%- primaryGenreName %></h3>
+        </div>
+        <hr class="Separator">
+        <div class="ShowTypeActor">
+            <h2> <%- artistType %></h2>
+        </div>
+        <div class="ResumeActor">
+            <p>
+                Resume unavailable for now.
+            </p>
+        </div>
+        <a href="<%- artistLinkUrl %>" class="AppleBadge"></a>
+        <a href="<%- artistImdbLink %>" class="ImdbBadge"></a>
+    </div>
+</div>
+<div class="Episodes container-fluid">
+    <% _.each(collection.models, function(content){ %>
+    <div class="EpisodeDetails filmsHeight col-lg-2 col-md-3 col-sd-4 col-xs-12 center-block">
+        <img src="<%= content.attributes.artworkUrl100 %>" />
+        <h4><%= content.attributes.trackCensoredName %></h4>
+        <h5><%= new Date(content.attributes.releaseDate).getFullYear() %></h5>
+    </div>
+    <% }); %>
+</div>

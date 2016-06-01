@@ -1,0 +1,24 @@
+@font-face {
+    font-family: champagneLimousines-normal;
+    src: url("../fonts/champagne_limousines/Champagne%20&%20Limousines.ttf");
+}
+
+@font-face {
+    font-family: champagneLimousines-bold-italic;
+    src: url("../fonts/champagne_limousines/Champagne%20&%20Limousines%20Bold%20Italic.ttf");
+}
+
+@font-face {
+    font-family: champagneLimousines-bold;
+    src: url("../fonts/champagne_limousines/Champagne%20&%20Limousines%20Bold.ttf");
+}
+
+@font-face {
+    font-family: champagneLimousines-italic;
+    src: url("../fonts/champagne_limousines/Champagne%20&%20Limousines%20Italic.ttf");
+}
+
+@font-face {
+    font-family: keepCalm;
+    src: url("../fonts/keep_calm/KeepCalm-Medium.ttf");
+}

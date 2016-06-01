@@ -1,0 +1,214 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #484848;
+}
+
+.container-page {
+    background-color: #303030;
+    color: white;
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.title-menu {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.logo-umovie {
+    height: 40px;
+    width: 40px;
+    color: white;
+    display: inline-flex;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.container-menu-profile {
+    display: inline-flex;
+}
+
+.container-menu-profile a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: 15px;
+    margin-right: 10px;
+}
+
+.img-gravatar-menu {
+    height: 50px;
+    width: 50px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+#SubPage {
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+
+
+.navbar-nav>li>a {
+    padding-top: 11px;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        float: left;
+    }
+
+    .logo-umovie {
+        height: 30px;
+        width: 30px;
+    }
+
+    .title-menu {
+        padding-top: 5px;
+    }
+}
+
+/* MODAL */
+
+.modal-content {
+    background-color: #ececec;
+    border: 1px solid #bdc3c7;
+    border-radius: 0px;
+    outline: 0;
+}
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 0px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px 15px 5px 15px;
+}
+
+.modal-footer {
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border-top: 0px;
+}
+
+.checkbox {
+    margin-bottom: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.successError{
+ 	z-index: 1060;
+}
+
+.successErrorDialog{
+ width: 350px; 
+ margin:auto;
+}
+
+.successErrorDialog{
+	width: 350px; 
+	margin:auto;
+}
+
+.successErrorContent{
+	background: rgba(95,95,95,1);
+    border-radius: 160px !important;
+}
+
+.ErrorServerContent{
+    background: rgb(47, 47, 47);
+    border: 1px solid #FF0000 !important;
+    border-radius: 43px !important;
+}
+
+.successErrorImg{
+	height: 200px; 
+	width:auto;
+}
+
+.textCentre{
+	text-align: center;
+}
+
+
+.titreModifWatchList{
+	color: rgb(48,48,48);
+}
+
+.logoModifWatchList{
+	height:100px; 
+	width:auto;
+}
+
+.menuModifWatchList{
+	margin:auto; 
+	margin-bottom: 10px; 
+	width: 80%;
+}
+
+.itemModifWatchList{
+	width: 80%;
+}
+
+.inscription{
+	text-align: center; 
+	color: red; 
+	visibility: hidden; 
+	height: 0px;
+}
+
+.deconnexion{
+	height: 0px; 
+	visibility: hidden;
+}
+
+.successErrorTitre{
+ 	color: white;
+}
+
+.couleurCreate{
+	color:green;
+}
+
+.couleurRename{
+	color:orange;
+}
+
+.couleurDelete{
+	color:red;
+}
+
+.collapseHeight{
+	height: 0px;
+}
+
+[required] {
+    color:red;
+    box-shadow: none;
+}
+
+
+/* SUP */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+

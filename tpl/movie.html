@@ -1,0 +1,61 @@
+<div class="MovieContainer row">
+    <div class="col-md-3 col-sm-5">
+        <div data-toggle="modal" data-target="#myModal">
+            <img src="<%- movie.artworkUrl100 %>" alt="film-cover" class="cover" />
+        </div>
+        <div class="MovieDetails">
+            <div id="time"><%- movie.trackLength  %></div>
+            <div class="kind"><%- movie.primaryGenreName %></div>
+            <div id="contentAdvisoryRating">
+                Rating : <%- movie.contentAdvisoryRating %>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-6">
+        <div class="TitleMovie">
+            <h1><%- movie.trackName %></h1>
+            <div class="releaseDate"><%- new Date(movie.releaseDate).getFullYear() %></div>
+        </div>
+        <hr class="Separator">
+
+        <div class="longDescription">
+            <p>
+                <%- movie.longDescription %>
+            </p>
+        </div>
+
+        <div class="ButtonContainer">
+            <a href="<%- movie.collectionViewUrl %>" class="posterMovie"></a>
+            <button class="myButton btn" data-toggle="modal" data-target="#modalWatchList"><span class="glyphicon glyphicon-eye-open"></span> Add to Watchlist</button>
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-vertical-centered">
+        <div class="modal-content trailerContent">
+            <div class="modal-body trailerBody" id="yt-player">
+                <iframe id="PreviewVideo" class="col-md-12 col-xs-12 col-sm-12 col-lg-12" height="315" src="http://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalWatchList" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-vertical-centered dialogMovieWatchList">
+        <div class="modal-content">
+            <div class="modal-header trailerBody">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <img src="http://img4.hostingpics.net/pics/729640iconumovie.png" class="imgMovieWatchList" />
+                <h2 class="titreMovieWatchList">Watch List</h2>
+            </div>
+            <p class="errorMovieWatchList" id="errorLogin"></p>
+            <div class="modal-body trailerBody">
+                <select id="WatchListElements" class="form-control">
+                    <% _.each(watchlist, function(list){ %>
+                        <option value="<%- list.attributes.id %>"><%- list.attributes.name %> </option>
+                    <% }); %>
+                </select>
+                <button id="AddWatchList" type="button" class="btn btn-primary addToWatchList" >Add to watchlist</button>
+            </div>
+        </div>
+    </div>
+</div>

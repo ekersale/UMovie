@@ -1,0 +1,86 @@
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #383838;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    max-width: 100px;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    text-transform: uppercase;
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+.btn-pref .btn {
+    -webkit-border-radius:0 !important;
+}
+
+.follow {
+    margin: 20px;
+    display: inline-flex;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: #ECECEC;
+    -webkit-box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+    box-shadow: 4px 6px 27px 1px rgba(0,0,0,0.51);
+}

@@ -1,0 +1,164 @@
+@import "Fonts.css";
+
+html {
+}
+
+.cover {
+    width: 280px;
+    max-width: 100%;
+    margin: auto;
+    padding-left: 15px;
+    display: block;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.cover:hover {
+    opacity: 0.3;
+}
+
+.MovieContainer {
+    color: #ededec;
+    font-size: 18px;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 200px;
+}
+
+.MovieDetails {
+    width: 280px;
+    max-width: 100%;
+    margin: auto;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.3em;
+    padding: 18px;
+    padding-left: 35px;
+}
+
+.myButton {
+    background-color: #151515;
+    height: 40px;
+    border: 1px solid white;
+    float: right;
+    margin-right: 15px;
+}
+
+.longDescription {
+    margin: 40px 10px 10px 10px;
+    float: left;
+}
+
+.ButtonContainer {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.TitleMovie {
+    position: relative;
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.TitleMovie h1 {
+    font-size: 2.5em;
+    color: #e9e9e9;
+    display: inline-block;
+    font-family: champagneLimousines-normal;
+    margin: 0;
+}
+
+.releaseDate {
+    font-size: 1.5em;
+    font-family: champagneLimousines-normal;
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#contentAdvisoryRating img {
+    max-width: 30px;
+    height: auto;
+}
+
+.BackgroundMovie {
+    background: url("http://www.hdwallpapers.in/walls/the_hateful_eight-HD.jpg") no-repeat 20px;
+    background-position: center 0;
+    background-attachment: scroll;
+    background-size: 1920px;
+}
+
+.posterMovie{
+	display:inline-block;
+	overflow:hidden;
+	background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_itunes-lrg.svg) no-repeat;
+	width:165px;
+	height:40px;
+}
+
+.trailerContent{
+	background:transparent; 
+	border: none; 
+	box-shadow: none;
+}
+
+.trailerBody{
+	text-align: center;
+}
+
+.dialogMovieWatchList{
+	width: 350px; 
+	margin:auto;
+}
+
+.imgMovieWatchList{
+	height:100px; 
+	width:auto;
+}
+
+.titreMovieWatchList{
+	color: rgb(48,48,48);
+}
+
+.errorMovieWatchList{
+	text-align: center; 
+	color: red; 
+	visibility: hidden; 
+	height: 0px;
+}
+
+.addToWatchList{
+	width: 100%;
+	margin-top: 10px
+}
+@media (max-width: 740px) {
+    .cover {
+        width: 390px;
+        height: auto;
+        margin: auto;
+        padding: 15px;
+        padding-bottom: 0;
+        display: block;
+        opacity: 1;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+    .cover:hover {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 370px) {
+    .myButton {
+        float: left;
+        margin-top: 10px;
+    }
+}
