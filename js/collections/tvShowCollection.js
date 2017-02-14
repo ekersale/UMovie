@@ -13,7 +13,7 @@ var app = app || {};
         },
 
         url:  function() {
-            return app.baseUrl + "/tvshows/season/" + this.id + "/episodes";
+            return app.baseUrl + "/tvshows/seasons/" + this.id + "/episodes";
         },
 
         parse: function(response) {

@@ -28,7 +28,7 @@ var app = app || {};
         }),
 
         url: (function () {
-            return app.baseUrl + "/tvshows/season/" + this.id;
+            return app.baseUrl + "/tvshows/seasons/" + this.id;
         }),
 
         defaults: (function () {
